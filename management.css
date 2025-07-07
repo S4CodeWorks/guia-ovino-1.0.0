@@ -1,0 +1,757 @@
+/* management.css - Extracted from hero.css */
+
+/* Advanced Management Section */
+.management-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Protection Module */
+.protection-module {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 32px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--floating-shadow);
+    padding: 3rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.protection-module:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.module-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.module-icon.protection {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
+}
+
+.module-title h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.module-subtitle {
+    font-size: 1rem;
+    color: var(--text-light-color);
+    font-weight: 500;
+}
+
+.protection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.protection-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.protection-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.protection-item.handling {
+    direction: rtl;
+}
+
+.protection-item.handling > * {
+    direction: ltr;
+}
+
+.item-visual {
+    position: relative;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.item-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 122, 255, 0.8);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.item-content h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.item-content p {
+    font-size: 1rem;
+    color: var(--text-light-color);
+    margin-bottom: 1.5rem;
+}
+
+.requirements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.req-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+}
+
+.req-item i {
+    color: #4CAF50;
+    font-size: 0.8rem;
+}
+
+.specifications {
+    margin-top: 1rem;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.spec-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 122, 255, 0.1);
+    border-radius: 16px;
+}
+
+.spec-item strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.spec-item span {
+    font-size: 0.85rem;
+    color: var(--text-light-color);
+}
+
+/* Production Systems */
+.production-systems {
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.05), rgba(76, 175, 80, 0.03));
+    border-radius: 32px;
+    padding: 3rem;
+    border: 1px solid var(--glass-border);
+}
+
+.systems-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.systems-header h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.systems-header p {
+    font-size: 1.1rem;
+    color: var(--text-light-color);
+}
+
+.systems-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.system-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--floating-shadow);
+    transition: all 0.4s ease;
+    border: 1px solid var(--glass-border);
+}
+
+.system-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.system-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.system-card.extensive .system-badge {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: white;
+}
+
+.system-card.semi-intensive .system-badge {
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+    color: white;
+}
+
+.system-card.intensive .system-badge {
+    background: linear-gradient(135deg, #2196F3, #03A9F4);
+    color: white;
+}
+
+.system-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.system-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.system-content {
+    padding: 1.5rem;
+}
+
+.system-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.system-content p {
+    font-size: 1rem;
+    color: var(--text-light-color);
+    margin-bottom: 1.5rem;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.benefit-item.positive i {
+    color: #4CAF50;
+}
+
+.benefit-item.negative i {
+    color: #F44336;
+}
+
+/* Facilities Grid */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.facility-item {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--floating-shadow);
+    transition: all 0.4s ease;
+}
+
+.facility-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.facility-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--secondary-color), #5AC8FA);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.3rem;
+}
+
+.facility-item h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.facility-item p {
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+    margin-bottom: 1rem;
+}
+
+.facility-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Feeding Section */
+.feeding-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    padding: 3rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--floating-shadow);
+}
+
+.feeding-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feeding-header h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.feeding-header p {
+    font-size: 1.1rem;
+    color: var(--text-light-color);
+}
+
+.food-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.food-category {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.food-category.volumosos .category-icon {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+
+.food-category.concentrados .category-icon {
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+}
+
+.food-category.subprodutos .category-icon {
+    background: linear-gradient(135deg, #9C27B0, #BA68C8);
+}
+
+.category-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.food-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+}
+
+.food-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.food-details strong {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.food-details span {
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+}
+
+/* Water Section */
+.water-section {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(3, 169, 244, 0.05));
+    border-radius: 32px;
+    padding: 3rem;
+    border: 1px solid var(--glass-border);
+}
+
+.water-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.water-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #2196F3, #03A9F4);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.water-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.water-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.water-category {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.water-category:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.water-category.highlight {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(240, 98, 146, 0.05));
+    border-color: rgba(233, 30, 99, 0.2);
+}
+
+.category-name {
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+    margin-bottom: 0.5rem;
+}
+
+.water-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.water-period {
+    font-size: 0.8rem;
+    color: var(--text-light-color);
+}
+
+.water-equipment {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+.equipment-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.equipment-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-light-color);
+}
+
+.equipment-note i {
+    color: var(--secondary-color);
+}
+
+/* Market Section */
+.market-section {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.05));
+    border-radius: 32px;
+    padding: 3rem;
+    border: 1px solid var(--glass-border);
+}
+
+.market-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.market-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.market-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.market-tips {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tip-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-light-color);
+}
+
+.tip-item i {
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.market-image {
+    height: 250px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.market-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .management-section {
+        gap: 2.5rem;
+    }
+
+    .protection-module {
+        padding: 2rem;
+    }
+
+    .protection-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .protection-item.handling {
+        direction: ltr;
+    }
+
+    .item-visual {
+        height: 180px;
+    }
+
+    .requirements {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .production-systems {
+        padding: 2rem;
+    }
+
+    .systems-carousel {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feeding-section {
+        padding: 2rem;
+    }
+
+    .food-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .water-section {
+        padding: 2rem;
+    }
+
+    .water-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .market-section {
+        padding: 2rem;
+    }
+
+    .market-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .water-equipment {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .management-section {
+        gap: 2rem;
+    }
+
+    .protection-module {
+        padding: 1.5rem;
+    }
+
+    .protection-item {
+        padding: 1rem;
+    }
+
+    .production-systems {
+        padding: 1.5rem;
+    }
+
+    .feeding-section {
+        padding: 1.5rem;
+    }
+
+    .water-section {
+        padding: 1.5rem;
+    }
+
+    .water-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .market-section {
+        padding: 1.5rem;
+    }
+
+    .food-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,326 @@
+/* features.css */
+
+.features-section {
+    padding: 6rem 0;
+    background: var(--section-bg-color);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+/* .container class from base.css will handle max-width and centering */
+
+/* .section-header styling is now in base.css */
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Remove grid for single centered item */
+}
+
+.feature-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 32px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: var(--floating-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--glass-border);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Enhanced Diary Feature Styling */
+.diary-feature {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.08), rgba(76, 175, 80, 0.05));
+    border: 2px solid rgba(0, 122, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.diary-feature:hover {
+    /* Less aggressive transform */
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 122, 255, 0.12);
+    border-color: rgba(0, 122, 255, 0.3);
+}
+
+.diary-spotlight {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.diary-icon-wrapper {
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.diary-badge {
+    background: linear-gradient(135deg, var(--secondary-color), #5AC8FA);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.2);
+}
+
+.diary-header {
+    margin-bottom: 1rem;
+}
+
+.diary-header h3 {
+    background: linear-gradient(135deg, var(--secondary-color), #5AC8FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+}
+
+.diary-subtitle {
+    color: var(--text-light-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.diary-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.stat-item i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.stat-item span {
+    font-size: 0.8rem;
+    color: var(--text-light-color);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Fix diary button spacing and layout */
+.diary-btn {
+    background: linear-gradient(135deg, var(--secondary-color), #5AC8FA);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    margin-top: 1rem;
+}
+
+.diary-btn:hover {
+    background: linear-gradient(135deg, #0056CC, var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.25);
+}
+
+.diary-btn i {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.diary-btn:hover i {
+    transform: translateX(3px);
+}
+
+.feature-card:hover {
+    /* Simplified hover - only shadow change */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.35s ease-out; /* Smoother zoom */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feature-card:hover .card-image {
+    /* Remove image scale on hover */
+    transform: none;
+}
+
+.feature-card .content {
+    padding: 2.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.feature-card i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(0, 122, 255, 0.05));
+    padding: 1rem;
+    border-radius: 50%; /* Circular icon background */
+    width: 56px;
+    height: 56px;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.1);
+}
+
+.feature-card:hover i {
+    /* Simplified icon hover effect */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.2);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    font-size: 1.35rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 0.6rem; 
+    margin-top: 0.5rem; /* Space after icon */
+}
+
+.feature-card p {
+    color: var(--text-light-color); /* Softer text color */
+    font-size: 0.95rem; /* Slightly larger paragraph text */
+    opacity: 1; /* Opacity handled by color itself */
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+    flex-grow: 1; 
+}
+
+.feature-card .content > a.btn {
+    margin-top: auto; 
+    align-self: flex-start; /* Align button to the left */
+}
+
+@media (max-width: 992px) { /* Tablet breakpoint */
+    .features {
+        justify-content: center;
+    }
+    
+    .diary-feature {
+        transform: scale(1);
+        max-width: 400px;
+    }
+    
+    .diary-feature:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .diary-stats {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 3.5rem 0;
+    }
+    
+    .features {
+        justify-content: center;
+    }
+    
+    .diary-feature {
+        max-width: 100%;
+    }
+    
+    .diary-spotlight {
+        top: -5px;
+        right: -5px;
+    }
+    
+    .diary-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+    
+    .diary-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .diary-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .diary-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 0.8rem;
+    }
+}
+
+/* Staggered animation for feature cards, handled by JS now */
